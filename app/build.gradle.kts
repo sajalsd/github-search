@@ -2,6 +2,8 @@
 plugins {
     id(libs.plugins.android.application.get().pluginId)
     id(libs.plugins.kotlin.android.get().pluginId)
+    id(libs.plugins.hilt.get().pluginId)
+    id(libs.plugins.kapt.get().pluginId)
 }
 
 android {
@@ -56,6 +58,9 @@ dependencies {
     implementation(libs.lifecycle.ktx)
     implementation(libs.bundles.activity)
     implementation(libs.bundles.compose)
+
+    implementation(libs.hilt)
+    kapt(libs.hiltKapt)
 
     testImplementation(libs.test.junit)
     androidTestImplementation(libs.bundles.android.test)

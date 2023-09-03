@@ -11,7 +11,7 @@ compose-latest = "1.6.0-alpha04"
 compose-compiler = "1.5.3"
 compose-runtime = "1.5.0"
 ui-tooling = "1.5.0"
-ui-test-junit4 = "ui-test-junit4"
+ui-test-junit4 = "1.5.0"
 material3 = "1.1.1"
 junit = "4.13.2"
 android-junit = "1.1.5"
@@ -24,6 +24,8 @@ moshiRetrofitConverter="2.9.0"
 
 hilt="2.44.2"
 hiltNavigation="1.0.0"
+kapt="1.9.0"
+
 
 mockwebserver = "4.11.0"
 mockk = "1.13.7"
@@ -98,3 +100,5 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-application = { id = "com.android.application", version.ref = "gradle" }
 android-library = { id = "com.android.library", version.ref = "gradle" }
 ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt"}
+kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kapt"}

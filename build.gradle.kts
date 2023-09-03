@@ -5,7 +5,9 @@ plugins {
     id(libs.plugins.android.library.get().pluginId) apply false
     id(libs.plugins.android.application.get().pluginId) apply false
     id(libs.plugins.kotlin.android.get().pluginId) apply false
+    id(libs.plugins.kapt.get().pluginId) apply false
     id(libs.plugins.ktlint.get().pluginId) version libs.versions.ktlint.get() apply false
+    id(libs.plugins.hilt.get().pluginId) version libs.versions.hilt.get() apply false
 }
 
 allprojects {
