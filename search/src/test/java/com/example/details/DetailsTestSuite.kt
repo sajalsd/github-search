@@ -11,6 +11,6 @@ import org.junit.runners.Suite.SuiteClasses
 @SuiteClasses(
     UserDetailsRepositoryImplTest::class,
     UserDetailsMapperKtTest::class,
-    GetUserDetailsUseCaseImplTest::class,
+    GetUserDetailsUseCaseImplTest::class
 )
 class DetailsTestSuite
