@@ -10,6 +10,9 @@ allprojects {
     apply("${rootProject.rootDir}/gradle/task.gradle")
 }
 
+subprojects {
+}
+
 tasks.register("clean") {
     delete(rootProject.buildDir)
 }
