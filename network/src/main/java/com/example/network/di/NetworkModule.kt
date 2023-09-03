@@ -5,7 +5,6 @@ import com.example.network.data.api.GithubApiService
 import com.example.network.di.qualifiers.HttpInterceptorSet
 import com.example.network.provider.OkHttpProvider
 import com.example.network.provider.RetrofitProvider
-import com.example.network.utils.ErrorHandler
 import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
@@ -24,10 +23,6 @@ class NetworkModule {
     @Singleton
     fun provideMoshi(): Moshi = Moshi.Builder()
         .build()
-
-    @Provides
-    @Singleton
-    fun provideHttpErrorHandler(moshi: Moshi): ErrorHandler = ErrorHandler(moshi)
 
     @Provides
     @Singleton

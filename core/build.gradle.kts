@@ -13,6 +13,8 @@ dependencies {
     implementation(libs.bundles.compose)
     implementation(libs.appcompat)
     implementation(libs.material)
+    api(libs.coil)
+    debugApi(libs.ui.tooling)
     testImplementation(libs.test.junit)
     androidTestImplementation(libs.android.test.junit)
     androidTestImplementation(libs.android.test.espresso)

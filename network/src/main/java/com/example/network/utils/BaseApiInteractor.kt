@@ -9,12 +9,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import retrofit2.Response
 import java.io.IOException
-import javax.inject.Inject
 
 abstract class BaseApiInteractor {
-
-    @Inject
-    protected lateinit var errorHandler: ErrorHandler
 
     protected suspend fun <T : Any> safeApiCall(
         dispatcher: CoroutineDispatcher = Dispatchers.IO,
@@ -32,7 +28,7 @@ abstract class BaseApiInteractor {
                     )
                 )
             } catch (httpException: Throwable) {
-                return@withContext ApiResponse.Error(errorHandler.parseHttpException(httpException))
+                return@withContext ApiResponse.Error(ErrorHandler.parseHttpException(httpException))
             }
 
             response.let {
@@ -42,7 +38,7 @@ abstract class BaseApiInteractor {
                     } ?: ApiResponse.Error(EmptyResponseBodyException())
                 } else {
                     ApiResponse.Error(
-                        errorHandler.parseCustomException(
+                        ErrorHandler.parseCustomException(
                             httpCode = response.code(),
                             message = response.message(),
                             errorBody = response.errorBody()?.string()

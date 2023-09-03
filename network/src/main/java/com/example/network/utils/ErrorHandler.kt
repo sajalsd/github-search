@@ -5,9 +5,8 @@ import com.example.network.data.model.GenericException
 import com.example.network.data.model.NetworkException
 import com.example.network.data.model.RequestException
 import com.squareup.moshi.Moshi
-import javax.inject.Inject
 
-class ErrorHandler @Inject constructor(private val moshi: Moshi) {
+object ErrorHandler {
     fun parseHttpException(throwable: Throwable): Exception {
         throwable.printStackTrace()
         return throwable.message?.let { message ->
@@ -24,7 +23,7 @@ class ErrorHandler @Inject constructor(private val moshi: Moshi) {
     ): Exception {
         errorBody?.let { responseBody ->
             try {
-                moshi.adapter(ErrorResponse::class.java)
+                Moshi.Builder().build().adapter(ErrorResponse::class.java)
                     .lenient()
                     .fromJson(responseBody) ?.let { errorResponse ->
                         return RequestException(httpCode = httpCode, message = errorResponse.message)

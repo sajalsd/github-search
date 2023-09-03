@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="GithubSearch.SplashScreen" parent="Theme.GithubSearch">
+        <item name="windowSplashScreenBackground">#FFFBFDF9</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_logo_dark</item>
+        <item name="postSplashScreenTheme">@style/Theme.GithubSearch</item>
+    </style>
+</resources>

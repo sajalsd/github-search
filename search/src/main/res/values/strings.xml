@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search_label">Search user</string>
+    <string name="search_placeholder">Please enter a user name</string>
+    <string name="search_hint_description">Search github user by entering a username. Start typing and see the result</string>
+    <string name="search_hint_image_description">Search Icon</string>
+    <string name="search_no_result_found">No result found. Try with different keyword</string>
+    <string name="search_no_internet">No Internet</string>
+
+
+    <string name="details_name">Name: %s</string>
+    <string name="details_email">Email: %s</string>
+    <string name="details_location">Location: %s</string>
+    <string name="details_following">Following: %s</string>
+    <string name="details_followers">Followers: %s</string>
+</resources>
