@@ -9,8 +9,12 @@ plugins {
 }
 
 allprojects {
-    apply(plugin = libs.plugins.ktlint.get().pluginId)
+    apply(plugin = "org.jlleitschuh.gradle.ktlint")
     apply("${rootProject.rootDir}/gradle/task.gradle")
+
+    configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
+        debug.set(true)
+    }
 }
 
 tasks.register("clean") {

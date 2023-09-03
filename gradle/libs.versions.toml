@@ -21,6 +21,7 @@ material = "1.9.0"
 [libraries]
 core-ktx = { module = "androidx.core:core-ktx", version.ref = "core-ktx" }
 gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
+gradle-api = { module = "com.android.tools.build:gradle-api", version.ref = "gradle" }
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 
 compose-bom = { module = "androidx.compose:compose-bom", version.ref="compose-bom"}
