@@ -14,6 +14,7 @@ dependencies {
     implementation(libs.bundles.okhttp)
     api(libs.retrofit)
     api(libs.bundles.moshi)
-    implementation(libs.test.junit)
+
     kapt(libs.moshiCodegen)
+    testImplementation(libs.bundles.test)
 }

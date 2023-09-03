@@ -46,4 +46,10 @@ android {
             )
         }
     }
+
+}
+
+
+dependencies {
+    implementation(libs.findLibrary("compose-runtime").get())
 }
