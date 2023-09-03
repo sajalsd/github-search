@@ -9,7 +9,7 @@ plugins {
 }
 
 allprojects {
-    apply(plugin = libs.plugins.ktlint.get().pluginId)
+    apply(plugin = "org.jlleitschuh.gradle.ktlint")
     apply("${rootProject.rootDir}/gradle/task.gradle")
 }
 
