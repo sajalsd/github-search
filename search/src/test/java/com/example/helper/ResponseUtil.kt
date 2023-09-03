@@ -2,6 +2,8 @@ package com.example.helper
 
 import com.example.network.data.dto.SearchResponse
 import com.example.network.data.dto.SearchResponseJsonAdapter
+import com.example.network.data.dto.UserDetailsDto
+import com.example.network.data.dto.UserDetailsDtoJsonAdapter
 import com.example.network.data.model.ApiResponse
 import com.squareup.moshi.Moshi
 import java.io.BufferedReader
@@ -32,10 +34,6 @@ object ResponseUtil {
         }
     }
 
-    fun getErrorSearchResponse(exception: Exception = IOException("No internet connection")): ApiResponse<SearchResponse> {
-        return ApiResponse.Error(exception)
-    }
-
     fun getSuccessResponse(fileName: String): ApiResponse.Success<SearchResponse> {
         return ApiResponse.Success(getMockSearchResponse(fileName))
     }
@@ -45,5 +43,12 @@ object ResponseUtil {
         val moshi = Moshi.Builder()
             .build()
         return SearchResponseJsonAdapter(moshi).fromJson(jsonString)!!
+    }
+
+    fun getMockUserDetailsResponse(fileName: String): UserDetailsDto {
+        val jsonString = readFileToString(ResponseUtil::class.java, "/$fileName")
+        val moshi = Moshi.Builder()
+            .build()
+        return UserDetailsDtoJsonAdapter(moshi).fromJson(jsonString)!!
     }
 }

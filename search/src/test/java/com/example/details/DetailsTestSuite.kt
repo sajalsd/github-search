@@ -1,12 +1,14 @@
 package com.example.details
 
 import com.example.details.data.repository.UserDetailsRepositoryImplTest
+import com.example.details.domain.model.UserDetailsMapperKtTest
 import org.junit.runner.RunWith
 import org.junit.runners.Suite
 import org.junit.runners.Suite.SuiteClasses
 
 @RunWith(Suite::class)
 @SuiteClasses(
-    UserDetailsRepositoryImplTest::class
+    UserDetailsRepositoryImplTest::class,
+    UserDetailsMapperKtTest::class
 )
 class DetailsTestSuite
