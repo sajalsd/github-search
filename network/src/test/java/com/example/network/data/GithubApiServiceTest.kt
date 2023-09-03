@@ -46,12 +46,12 @@ class GithubApiServiceTest {
     }
 
     @Test
-    fun `getUser calls with GET and path parameter`(): Unit = runBlocking {
+    fun `getUserDetails calls with GET and path parameter`(): Unit = runBlocking {
         val username = "test"
 
         server.enqueue(mockResponse("user_details_response.json"))
 
-        gitApiService.getUser(username)
+        gitApiService.getUserDetails(username)
         val request = server.takeRequest()
 
         Assert.assertEquals(request.method, "GET")

@@ -61,6 +61,7 @@ dependencies {
     implementation(libs.bundles.compose)
     implementation(libs.material)
 
+    implementation(libs.hiltNavigation)
     implementation(libs.hilt)
     kapt(libs.hiltKapt)
 
