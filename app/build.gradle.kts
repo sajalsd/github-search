@@ -54,13 +54,17 @@ android {
 
 dependencies {
     implementation(project(":core"))
+    implementation(project(":search"))
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.ktx)
     implementation(libs.bundles.activity)
     implementation(libs.bundles.compose)
+    implementation(libs.material)
 
     implementation(libs.hilt)
     kapt(libs.hiltKapt)
+
+    implementation(libs.core.splashscreen)
 
     testImplementation(libs.test.junit)
     androidTestImplementation(libs.bundles.android.test)

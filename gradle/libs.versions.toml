@@ -44,6 +44,7 @@ gradle-api = { module = "com.android.tools.build:gradle-api", version.ref = "gra
 kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 javapoet = { module = "com.squareup:javapoet", version.ref = "javapoet" }
 
+core-splashscreen = { module = "androidx.core:core-splashscreen", version = "1.0.1" }
 compose-bom = { module = "androidx.compose:compose-bom", version.ref="compose-bom"}
 compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose-latest"}
 compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "compose-compiler"}
