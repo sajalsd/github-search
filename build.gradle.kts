@@ -11,7 +11,6 @@ plugins {
 allprojects {
     apply(plugin = "org.jlleitschuh.gradle.ktlint")
 
-
     configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
         debug.set(true)
     }
