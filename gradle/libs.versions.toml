@@ -19,6 +19,8 @@ android-junit = "1.1.5"
 espresso-core = "3.5.1"
 appcompat = "1.6.1"
 material = "1.9.0"
+archCore = "2.2.0"
+coroutinesTest = "1.7.3"
 
 moshi="1.14.0"
 moshiRetrofitConverter="2.9.0"
@@ -74,8 +76,11 @@ moshiConverter = { module = "com.squareup.retrofit2:converter-moshi", version.re
 
 mockWebServer = { module = "com.squareup.okhttp3:mockwebserver", version.ref = "mockwebserver" }
 mockk = {module = "io.mockk:mockk", version.ref = "mockk"}
+mockito = {module = "org.mockito:mockito-inline", version = "2.13.0"}
 mockk-android = {module = "io.mockk:mockk-android", version.ref = "mockk"}
 truth = {module = "com.google.truth:truth", version.ref = "truth"}
+archCore = {module = "androidx.arch.core:core-testing", version.ref = "archCore"}
+coroutinesTest = {module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutinesTest"}
 
 
 hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
@@ -99,7 +104,7 @@ android-test=[
 
 okhttp = ["okhttp", "okhttp-logging"]
 moshi = ["moshi", "moshiKotlin", "moshiConverter"]
-test = ["test-junit", "mockk", "mockWebServer", "truth"]
+test = ["test-junit", "mockk", "mockWebServer", "truth", "archCore", "coroutinesTest", "mockito"]
 
 
 [plugins]

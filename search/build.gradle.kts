@@ -15,7 +15,7 @@ dependencies {
     implementation(libs.paging3)
     implementation(libs.paging3Compose)
 
-    testImplementation(libs.test.junit)
+    testImplementation(libs.bundles.test)
     androidTestImplementation(libs.android.test.junit)
     androidTestImplementation(libs.android.test.espresso)
 }

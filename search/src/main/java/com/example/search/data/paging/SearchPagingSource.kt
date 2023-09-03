@@ -20,17 +20,13 @@ class SearchPagingSource @Inject constructor(
                 is ApiResponse.Success -> {
                     val endOfPaginationReached = result.responseData.items.isEmpty()
 
-                    if (result.responseData.items.isNotEmpty()) {
-                        val userList = result.responseData.items
+                    val userList = result.responseData.items
 
-                        LoadResult.Page(
-                            data = userList,
-                            prevKey = if (currentPage == 1) null else currentPage - 1,
-                            nextKey = if (endOfPaginationReached) null else currentPage + 1
-                        )
-                    } else {
-                        LoadResult.Page(data = emptyList(), prevKey = null, nextKey = null)
-                    }
+                    LoadResult.Page(
+                        data = userList,
+                        prevKey = if (currentPage <= 1) null else currentPage - 1,
+                        nextKey = if (endOfPaginationReached) null else currentPage + 1
+                    )
                 }
 
                 is ApiResponse.Error -> {

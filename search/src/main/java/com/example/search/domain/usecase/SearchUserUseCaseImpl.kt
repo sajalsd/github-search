@@ -30,8 +30,8 @@ class SearchUserUseCaseImpl @Inject constructor(
         }
     }
     companion object {
-        private const val PAGE_SIZE = 20
-        private const val PREFETCH_DISTANCE = 10
-        private const val INITIAL_LOAD_SIZE = 40
+        const val PAGE_SIZE = 20
+        const val PREFETCH_DISTANCE = 10
+        const val INITIAL_LOAD_SIZE = 40
     }
 }
