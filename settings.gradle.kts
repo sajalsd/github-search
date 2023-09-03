@@ -1,7 +1,5 @@
 @file:Suppress("UnstableApiUsage")
 
-include(":core")
-
 pluginManagement {
     repositories {
         google()
@@ -19,3 +17,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Github Search"
 include(":app")
+include(":network")
+include(":core")

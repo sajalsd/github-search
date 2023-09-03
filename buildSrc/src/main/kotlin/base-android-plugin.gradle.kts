@@ -27,6 +27,7 @@ android {
 
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 
     composeOptions {
@@ -45,4 +46,10 @@ android {
             )
         }
     }
+
+}
+
+
+dependencies {
+    implementation(libs.findLibrary("compose-runtime").get())
 }
