@@ -51,6 +51,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":core"))
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.ktx)
     implementation(libs.bundles.activity)

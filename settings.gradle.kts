@@ -2,7 +2,6 @@
 
 include(":core")
 
-
 pluginManagement {
     repositories {
         google()
