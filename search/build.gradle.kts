@@ -14,6 +14,8 @@ dependencies {
     implementation(libs.core.ktx)
     implementation(libs.paging3)
     implementation(libs.paging3Compose)
+    implementation(libs.bundles.compose)
+    implementation(libs.hiltNavigation)
 
     testImplementation(libs.bundles.test)
     androidTestImplementation(libs.android.test.junit)

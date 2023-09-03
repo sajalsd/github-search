@@ -29,6 +29,7 @@ hilt="2.44.2"
 hiltNavigation="1.0.0"
 kapt="1.9.0"
 
+coil="2.4.0"
 paging3="3.1.1"
 paging3Compose="3.2.0"
 
@@ -87,6 +88,7 @@ hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hiltKapt = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
 hiltNavigation = {module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigation" }
 
+coil = {module = "io.coil-kt:coil-compose", version.ref = "coil" }
 paging3 = {module = "androidx.paging:paging-runtime", version.ref = "paging3" }
 paging3Compose = {module = "androidx.paging:paging-compose", version.ref = "paging3Compose" }
 

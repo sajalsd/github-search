@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="no_internet_msg">No Internet connection</string>
+    <string name="generic_error_msg">Something went wrong, try again later</string>
+    <string name="search_warning_image_description">Warning Icon</string>
+</resources>
