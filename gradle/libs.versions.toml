@@ -26,6 +26,8 @@ hilt="2.44.2"
 hiltNavigation="1.0.0"
 kapt="1.9.0"
 
+paging3="3.1.1"
+paging3Compose="3.2.0"
 
 mockwebserver = "4.11.0"
 mockk = "1.13.7"
@@ -77,6 +79,9 @@ truth = {module = "com.google.truth:truth", version.ref = "truth"}
 hilt = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hiltKapt = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
 hiltNavigation = {module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigation" }
+
+paging3 = {module = "androidx.paging:paging-runtime", version.ref = "paging3" }
+paging3Compose = {module = "androidx.paging:paging-compose", version.ref = "paging3Compose" }
 
 [bundles]
 compose = [
