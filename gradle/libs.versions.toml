@@ -1,0 +1,67 @@
+[versions]
+ktlint = "11.4.2"
+kotlin = "1.8.10"
+gradle = "8.1.1"
+core-ktx = "1.10.1"
+
+activity = "1.7.2"
+lifecycle-ktx = "2.6.1"
+compose-bom = "2023.08.00"
+compose-latest = "1.6.0-alpha04"
+ui-tooling = "1.5.0"
+ui-test-junit4 = "ui-test-junit4"
+material3 = "1.1.1"
+junit = "4.13.2"
+android-junit = "1.1.5"
+espresso-core = "3.5.1"
+appcompat = "1.6.1"
+material = "1.9.0"
+
+
+[libraries]
+core-ktx = { module = "androidx.core:core-ktx", version.ref = "core-ktx" }
+gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+
+compose-bom = { module = "androidx.compose:compose-bom", version.ref="compose-bom"}
+compose-ui = { module = "androidx.compose.ui:ui", version.ref = "compose-latest"}
+compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "material3"}
+ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "ui-tooling" }
+ui-tooling-preview-android = { group = "androidx.compose.ui", name = "ui-tooling-preview-android", version.ref = "ui-tooling" }
+
+test-junit = { module = "junit:junit", version.ref="junit"}
+
+android-test-junit = { module = "androidx.test.ext:junit", version.ref="android-junit"}
+android-test-espresso = { module = "androidx.test.espresso:espresso-core", version.ref="espresso-core"}
+compose-ui-test = { module = "androidx.compose.ui:ui-test-junit4", version.ref="ui-test-junit4"}
+
+activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activity" }
+activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activity" }
+
+lifecycle-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle-ktx" }
+
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+
+[bundles]
+compose = [
+    "compose-bom", "activity-compose", "compose-ui", "compose-material3",
+    "ui-tooling-preview-android"
+]
+activity =[
+    "activity-compose", "activity-ktx"
+]
+android-test=[
+    "android-test-junit", "android-test-espresso", "compose-ui-test", "compose-bom"
+]
+
+
+
+
+
+[plugins]
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+android-application = { id = "com.android.application", version.ref = "gradle" }
+android-library = { id = "com.android.library", version.ref = "gradle" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
