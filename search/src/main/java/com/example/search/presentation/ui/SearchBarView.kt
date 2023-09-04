@@ -23,14 +23,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusManager
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.core.R
+import com.example.search.presentation.utils.SEARCH_BAR_TEST_TAG
+import com.example.search.presentation.utils.SEARCH_BAR_VIEW_TEST_TAG
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SearchBarView(
-    modifier: Modifier = Modifier,
+    modifier: Modifier = Modifier.testTag(SEARCH_BAR_VIEW_TEST_TAG),
     placeholder: String,
     searchText: String,
     onSearchTextChange: (String) -> Unit,
@@ -44,6 +48,7 @@ fun SearchBarView(
     return Box(modifier = modifier) {
         SearchBar(
             modifier = Modifier
+                .testTag(SEARCH_BAR_TEST_TAG)
                 .fillMaxWidth()
                 .padding(vertical = dimensionResource(id = R.dimen.small_padding))
                 .onFocusChanged { focusState ->
@@ -68,7 +73,12 @@ fun SearchBarView(
                             onClearClick()
                         }
                     }) {
-                        Icon(imageVector = Icons.Filled.Clear, contentDescription = "")
+                        Icon(
+                            imageVector = Icons.Filled.Clear,
+                            contentDescription = stringResource(
+                                id = com.example.search.R.string.search_bar_clear_des
+                            )
+                        )
                     }
                 }
             },

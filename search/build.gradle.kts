@@ -18,6 +18,6 @@ dependencies {
     implementation(libs.hiltNavigation)
 
     testImplementation(libs.bundles.test)
-    androidTestImplementation(libs.android.test.junit)
-    androidTestImplementation(libs.android.test.espresso)
+    androidTestImplementation(libs.bundles.android.test)
+    debugImplementation(libs.ui.test.manifest)
 }

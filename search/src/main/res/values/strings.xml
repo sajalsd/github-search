@@ -13,4 +13,7 @@
     <string name="details_location">Location: %s</string>
     <string name="details_following">Following: %s</string>
     <string name="details_followers">Followers: %s</string>
+
+    <string name="search_bar_clear_des">Clear search field</string>
+
 </resources>
