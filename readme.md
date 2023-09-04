@@ -24,7 +24,7 @@ Landing page | Search Result  | Details page
 
 Empty Page - No Result  | Error Page                                             |  Dark mode
 --- |--------------------------------------------------------| ---  
-![Empty page](screenshots/no_internet.png  "Empty Page") | ![Error page](screenshots/api_error.png  "Error Page") | ![Loading page](screenshots/search_result_dark "Loading sate")
+![Empty page](screenshots/no_internet.png  "Empty Page") | ![Error page](screenshots/api_error.png  "Error Page") | ![Loading page](screenshots/search_result_dark.png "Loading sate")
 
 ## Project Structure
 This project follows a multi-module architecture, consisting of the following modules:
