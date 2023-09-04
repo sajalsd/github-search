@@ -105,7 +105,7 @@ activity =[
     "activity-compose", "activity-ktx"
 ]
 android-test=[
-    "android-test-junit", "android-test-espresso", "compose-ui-test", "compose-bom"
+    "android-test-junit", "android-test-espresso",  "archCore", "compose-ui-test", "compose-bom"
 ]
 
 okhttp = ["okhttp", "okhttp-logging"]

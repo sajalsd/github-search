@@ -13,6 +13,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.core.ui.CircleImage
@@ -27,7 +28,7 @@ fun UserListItem(
     onUserClick: () -> Unit
 ) {
     return Card(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier.fillMaxWidth().testTag(user.id.toString()),
         elevation = CardDefaults.cardElevation(dimensionResource(CoreR.dimen.elevation)),
         shape = RoundedCornerShape(dimensionResource(CoreR.dimen.border_radius)),
         onClick = onUserClick

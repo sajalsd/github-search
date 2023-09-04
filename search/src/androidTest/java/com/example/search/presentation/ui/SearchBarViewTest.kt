@@ -15,6 +15,7 @@ import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performTextInput
 import androidx.compose.ui.test.requestFocus
 import androidx.compose.ui.text.input.ImeAction
+import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.example.search.R
 import com.example.search.presentation.utils.SEARCH_BAR_TEST_TAG
@@ -23,8 +24,10 @@ import org.junit.Assert
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
+import org.junit.runner.RunWith
 
-class SearchBarViewKtTest {
+@RunWith(AndroidJUnit4::class)
+class SearchBarViewTest {
     @Rule
     @JvmField
     var composeTestRule: ComposeContentTestRule = createComposeRule()

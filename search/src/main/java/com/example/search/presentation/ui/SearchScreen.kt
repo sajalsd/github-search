@@ -10,6 +10,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -19,6 +20,7 @@ import com.example.core.ui.EmptyView
 import com.example.network.data.model.ConnectionException
 import com.example.search.R
 import com.example.search.domain.model.User
+import com.example.search.presentation.utils.CIRCULAR_PROGRESS_TEST_TAG
 import com.example.search.presentation.viewmodel.SearchViewModel
 
 @Composable
@@ -47,8 +49,13 @@ fun SearchScreen(
             when {
                 searchText.isEmpty() -> SearchHintView()
 
-                (lazyPagingUsers.loadState.refresh is LoadState.Loading) &&
-                    searchText.isNotEmpty() -> CircularProgressIndicator(Modifier.align(Alignment.Center))
+                (lazyPagingUsers.loadState.refresh is LoadState.Loading) && searchText.isNotEmpty() -> {
+                    CircularProgressIndicator(
+                        Modifier
+                            .align(Alignment.Center)
+                            .testTag(CIRCULAR_PROGRESS_TEST_TAG)
+                    )
+                }
 
                 lazyPagingUsers.loadState.refresh is LoadState.Error -> {
                     val exception = (lazyPagingUsers.loadState.refresh as LoadState.Error).error

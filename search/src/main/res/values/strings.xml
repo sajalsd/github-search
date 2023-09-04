@@ -7,7 +7,6 @@
     <string name="search_no_result_found">No result found. Try with different keyword</string>
     <string name="search_no_internet">No Internet</string>
 
-
     <string name="details_name">Name: %s</string>
     <string name="details_email">Email: %s</string>
     <string name="details_location">Location: %s</string>
