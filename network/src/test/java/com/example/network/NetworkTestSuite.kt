@@ -9,5 +9,10 @@ import org.junit.runners.Suite
 import org.junit.runners.Suite.SuiteClasses
 
 @RunWith(Suite::class)
-@SuiteClasses(GithubApiServiceTest::class, OkHttpProviderTest::class, RetrofitProviderTest::class, ErrorHandlerTest::class)
+@SuiteClasses(
+    GithubApiServiceTest::class,
+    OkHttpProviderTest::class,
+    RetrofitProviderTest::class,
+    ErrorHandlerTest::class
+)
 class NetworkTestSuite

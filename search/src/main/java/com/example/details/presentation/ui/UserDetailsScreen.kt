@@ -1,4 +1,4 @@
-package com.example.details.presentation
+package com.example.details.presentation.ui
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -20,6 +20,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
@@ -27,6 +28,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.core.ui.CircleImage
 import com.example.core.ui.EmptyView
+import com.example.details.presentation.ui.utils.CIRCULAR_PROGRESS_TEST_TAG
+import com.example.details.presentation.ui.utils.EMPTY_VIEW_TEST_TAG
+import com.example.details.presentation.ui.utils.USER_DETAILS_TEST_TAG
 import com.example.details.presentation.viewmodel.UserDetailsViewModel
 import com.example.search.R
 
@@ -44,18 +48,19 @@ fun UserDetailsScreen(
         if (state.isLoading) {
             CircularProgressIndicator(
                 modifier = Modifier.align(Alignment.CenterHorizontally)
+                    .testTag(CIRCULAR_PROGRESS_TEST_TAG)
             )
         }
 
         if (state.error != null) {
-            Box(modifier = Modifier.fillMaxHeight(0.5f)) {
+            Box(modifier = Modifier.fillMaxHeight(0.5f).testTag(EMPTY_VIEW_TEST_TAG)) {
                 EmptyView(text = state.error.asString())
             }
         }
 
         state.userDetails?.let { userDetails ->
             Column(
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth().testTag(USER_DETAILS_TEST_TAG),
                 verticalArrangement = Arrangement.spacedBy(dimensionResource(id = com.example.core.R.dimen.margin))
             ) {
                 CircleImage(

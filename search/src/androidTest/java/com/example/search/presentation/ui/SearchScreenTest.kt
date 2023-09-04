@@ -42,10 +42,6 @@ class SearchScreenTest {
     @get:Rule
     var instantExecutorRule = InstantTaskExecutorRule()
 
-//    private val scheduler = TestCoroutineScheduler()
-//    private val dispatcher = StandardTestDispatcher(scheduler)
-//    private val testCoroutineScope = TestScope(dispatcher)
-
     val viewModel = SearchViewModel(FakeSearchUseCase())
     private fun setupScreen(
         searchViewModel: SearchViewModel = viewModel,

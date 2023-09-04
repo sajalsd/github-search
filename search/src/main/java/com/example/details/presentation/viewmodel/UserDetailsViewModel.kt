@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.core.util.Resource
 import com.example.details.domain.usecase.GetUserDetailsUseCase
-import com.example.details.presentation.UserDetailsState
+import com.example.details.presentation.ui.model.UserDetailsState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach

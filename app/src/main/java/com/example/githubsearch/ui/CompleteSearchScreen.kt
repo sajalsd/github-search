@@ -15,7 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.example.details.presentation.UserDetailsScreen
+import com.example.details.presentation.ui.UserDetailsScreen
 import com.example.details.presentation.viewmodel.UserDetailsViewModel
 import com.example.search.presentation.ui.SearchScreen
 import kotlinx.coroutines.launch

@@ -1,5 +1,6 @@
-package com.example.search
+package com.example
 
+import com.example.details.presentation.ui.UserDetailsScreenTest
 import com.example.search.presentation.ui.SearchBarViewTest
 import com.example.search.presentation.ui.SearchScreenTest
 import com.example.search.presentation.ui.UserListItemTest
@@ -12,6 +13,7 @@ import org.junit.runners.Suite
     SearchBarViewTest::class,
     UserListItemTest::class,
     UserListViewTest::class,
-    SearchScreenTest::class
+    SearchScreenTest::class,
+    UserDetailsScreenTest::class
 )
 class UiTestSuite

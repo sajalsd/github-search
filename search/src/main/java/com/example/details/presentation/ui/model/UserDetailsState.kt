@@ -1,4 +1,4 @@
-package com.example.details.presentation
+package com.example.details.presentation.ui.model
 
 import com.example.core.util.UiText
 import com.example.details.domain.model.UserDetails
