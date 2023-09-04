@@ -1,4 +1,4 @@
-package com.example.search.data.repository
+package com.example.search.domain.repository
 
 import com.example.network.data.dto.SearchResponse
 import com.example.network.data.model.ApiResponse

@@ -3,8 +3,8 @@ package com.example.details.domain.usecase
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.example.core.util.AppError
 import com.example.core.util.Resource
-import com.example.details.data.repository.UserDetailsRepository
 import com.example.details.domain.model.UserDetails
+import com.example.details.domain.repository.UserDetailsRepository
 import com.example.helper.ResponseUtil
 import com.example.network.data.model.ApiResponse
 import com.google.common.truth.Truth

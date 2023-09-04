@@ -4,6 +4,7 @@ import com.example.network.data.api.GithubApiService
 import com.example.network.data.dto.SearchResponse
 import com.example.network.data.model.ApiResponse
 import com.example.network.utils.BaseApiInteractor
+import com.example.search.domain.repository.SearchUserRepository
 import javax.inject.Inject
 
 class SearchUserRepositoryImpl @Inject constructor(

@@ -4,7 +4,7 @@ import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.example.network.data.dto.UserDto
 import com.example.network.data.model.ApiResponse
-import com.example.search.data.repository.SearchUserRepository
+import com.example.search.domain.repository.SearchUserRepository
 import javax.inject.Inject
 
 class SearchPagingSource @Inject constructor(

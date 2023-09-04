@@ -5,9 +5,9 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import androidx.paging.map
 import com.example.search.data.paging.SearchPagingSource
-import com.example.search.data.repository.SearchUserRepository
 import com.example.search.domain.model.User
 import com.example.search.domain.model.toUser
+import com.example.search.domain.repository.SearchUserRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject

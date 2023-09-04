@@ -1,7 +1,7 @@
 package com.example.search.di
 
-import com.example.search.data.repository.SearchUserRepository
 import com.example.search.data.repository.SearchUserRepositoryImpl
+import com.example.search.domain.repository.SearchUserRepository
 import com.example.search.domain.usecase.SearchUserUseCase
 import com.example.search.domain.usecase.SearchUserUseCaseImpl
 import dagger.Binds

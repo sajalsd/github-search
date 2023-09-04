@@ -4,9 +4,9 @@ import com.example.core.R
 import com.example.core.util.AppError
 import com.example.core.util.Resource
 import com.example.core.util.UiText
-import com.example.details.data.repository.UserDetailsRepository
 import com.example.details.domain.model.UserDetails
 import com.example.details.domain.model.toUserDetails
+import com.example.details.domain.repository.UserDetailsRepository
 import com.example.network.data.model.ApiResponse
 import com.example.network.data.model.ConnectionException
 import com.example.network.data.model.RequestException

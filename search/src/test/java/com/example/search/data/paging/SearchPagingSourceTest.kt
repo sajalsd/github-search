@@ -8,7 +8,7 @@ import com.example.helper.capture
 import com.example.network.data.dto.SearchResponse
 import com.example.network.data.dto.UserDto
 import com.example.network.data.model.ApiResponse
-import com.example.search.data.repository.SearchUserRepository
+import com.example.search.domain.repository.SearchUserRepository
 import com.google.common.truth.Truth.assertThat
 import io.mockk.MockKAnnotations
 import kotlinx.coroutines.Dispatchers

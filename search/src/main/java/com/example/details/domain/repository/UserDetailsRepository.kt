@@ -1,4 +1,4 @@
-package com.example.details.data.repository
+package com.example.details.domain.repository
 
 import com.example.network.data.dto.UserDetailsDto
 import com.example.network.data.model.ApiResponse

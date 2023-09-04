@@ -1,5 +1,6 @@
 package com.example.details.data.repository
 
+import com.example.details.domain.repository.UserDetailsRepository
 import com.example.network.data.api.GithubApiService
 import com.example.network.data.dto.UserDetailsDto
 import com.example.network.data.model.ApiResponse
