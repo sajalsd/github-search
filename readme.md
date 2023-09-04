@@ -22,9 +22,9 @@ Landing page | Search Result  | Details page
 --- | ----------------------| ---  
 ![Entry Screen](screenshots/search_hint.png  "Entry Screen") | ![Search page](screenshots/search_result_light.png  "Search Result")  | ![Details page](screenshots/user_details.png  "Details page")
 
-Empty Page - No Result  | Error Page |  Dark mode
---- |--------------------| ---  
-![Empty page](screenshots/no_internet.png  "Empty Page") | ![Error page](screenshots/search_result_dark.png  "Error Page") | ![Loading page](screenshots/search_rersult_dark "Loading sate")
+Empty Page - No Result  | Error Page                                             |  Dark mode
+--- |--------------------------------------------------------| ---  
+![Empty page](screenshots/no_internet.png  "Empty Page") | ![Error page](screenshots/api_error.png  "Error Page") | ![Loading page](screenshots/search_result_dark "Loading sate")
 
 ## Project Structure
 This project follows a multi-module architecture, consisting of the following modules:
@@ -54,7 +54,7 @@ Each module has clean architecture that separates concerns and promotes maintain
     - **View Models:** Manages UI-related data and state.
 
 
-## Technical Specification Highlight
+#### Technical Specification Highlight
 * MVVM with clean architecture pattern
 * Coroutine, Flow, Jetpack Compose
 * Paging 3 with Lazy Column - show/hide top/bottom loading animation
