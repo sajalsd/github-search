@@ -1,5 +1,27 @@
+@Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
-    id("com.android.application") version "8.1.0" apply false
-    id("org.jetbrains.kotlin.android") version "1.8.10" apply false
+    id(libs.plugins.android.library.get().pluginId) apply false
+    id(libs.plugins.android.application.get().pluginId) apply false
+    id(libs.plugins.kotlin.android.get().pluginId) apply false
+    id(libs.plugins.kapt.get().pluginId) apply false
+    id(libs.plugins.ktlint.get().pluginId) version libs.versions.ktlint.get() apply false
+    id(libs.plugins.hilt.get().pluginId) version libs.versions.hilt.get() apply false
+}
+
+allprojects {
+    apply(plugin = "org.jlleitschuh.gradle.ktlint")
+
+    configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
+        debug.set(true)
+    }
+}
+
+subprojects {
+    apply("${rootProject.rootDir}/gradle/task.gradle")
+}
+
+tasks.register("clean") {
+    delete(rootProject.buildDir)
 }

@@ -1,0 +1,24 @@
+tasks.register('installGitHook', Copy) {
+    from file("$rootProject.rootDir/scripts/pre-commit")
+    into file("$rootProject.rootDir/.git/hooks")
+    fileMode 0777
+}
+
+//tasks.register('installGitHook', Exec) {
+//    description = "Installs the pre-commit git hooks from /git-hooks."
+//    group = "git hooks"
+//    workingDir = rootDir
+//    commandLine = "chmod"
+//    args("-R", "+x", ".git/hooks/")
+//    dependsOn("copyGitHook")
+//    doLast {
+//        logger.info("Git hook installed successfully.")
+//    }
+//}
+
+afterEvaluate {
+    tasks.getByPath(':app:preBuild').dependsOn installGitHook
+    tasks.getByPath(':app:preBuild').dependsOn ktlintFormat
+}
+
+
